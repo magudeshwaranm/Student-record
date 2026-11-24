@@ -1,0 +1,23 @@
+student: stu_main.o stu_add.o stu_del.o stu_sav.o stu_mod.o stu_show.o
+	gcc stu_main.o stu_add.o stu_del.o stu_sav.o stu_mod.o stu_show.o -o student
+
+stu_main.o: stu_main.c header.h
+	gcc -c stu_main.c
+
+stu_add.o: stu_add.c header.h
+	gcc -c stu_add.c
+
+stu_del.o: stu_del.c header.h
+	gcc -c stu_del.c
+
+stu_sav.o: stu_sav.c header.h
+	gcc -c stu_sav.c
+
+stu_mod.o: stu_mod.c header.h
+	gcc -c stu_mod.c
+
+stu_show.o: stu_show.c header.h
+	gcc -c stu_show.c
+
+clean:
+	rm -f *.o student
